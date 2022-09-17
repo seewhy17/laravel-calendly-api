@@ -31,6 +31,7 @@ class Client
         $this->client = new GuzzleHttpClient(
             [
                 'base_uri' => self::BASE_URI,
+                'verify' => false,
                 'headers' => [
                     'Authorization' => "Bearer " . $config['personal_token'],
                     'Accept' => 'application/json',
